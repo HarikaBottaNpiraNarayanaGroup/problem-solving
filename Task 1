@@ -1,0 +1,38 @@
+Task 1
+1. Series: 1, 4, 10, 22, 46 ....
+Write a program to print the given position element?
+Eg: input = 6
+	output = 94
+
+Observartion and Solution Approach : 
+
+step:1  
+1 x 2 = 2
+2 + 2 = 4
+
+Step:2
+4 * 2 = 8
+8 + 2 = 10
+
+Step:3
+10 * 2 = 20
+20 + 2 = 22
+
+step:4
+22 * 2 = 44
+44 + 2 = 46
+
+step:5
+46 * 2 = 92 
+92 + 2 = 94
+
+CODING :
+n=6 #int(input())
+pattern=1 
+for i in range(1,n):
+    pattern=pattern*2
+    pattern=pattern+2
+print(pattern)
+
+OUTPUT :
+94
