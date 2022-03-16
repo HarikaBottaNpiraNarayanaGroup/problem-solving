@@ -1,0 +1,35 @@
+Task 2
+------
+
+observe the data below. 
+	3 + 2 + 4 = 14
+	4 + 3 + 7 = 33
+	3 + 4 + 9 = 48
+	3 + 1 + 8 = 11
+	v1 + v2 + v3 = output
+Based on given data, take 3 values as input and print the expected output.
+
+Answer:
+-------
+logic is 
+(V1+V2)*V3=output
+(3 + 4) * 2 = 14
+(4 + 7) * 3 = 33
+(3 + 9) * 4 = 48
+(3 + 8) * 1 = 11
+
+CODING
+--------
+v1=int(input())
+v2=int(input())
+v3=int(input())
+logic = (v1+v3)*v2
+print(v1,"+",v2,"+",v3,"=",logic)
+
+OUTPUT:
+-------
+3
+4
+9
+
+3 + 4 + 9 = 48
