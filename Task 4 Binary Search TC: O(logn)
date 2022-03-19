@@ -1,0 +1,39 @@
+Task 4 :
+
+Given an array of integers nuas sorted in non-decreasing order, find the starting and ending
+position of a given target value.
+If target is not found in the array, return [- 1, - 1] .
+You must write an algorithm with 0(log n) runtime complexity.
+
+Example 1:
+Input: nums = [5,7,7,8,8,101, target = 8
+Output: [3,4]
+
+Example 2:
+Input: nums = [5,7,7,8,8,101, target = 6
+Output: [-1,-1]
+
+Example 3:
+Input: nums = [], target = 0
+Output: [-1,-1]
+
+Code:
+def binarySearch(list1, low, high, target):
+    if (low<=high):
+        mid=(low+high)//2
+        if list1[mid]==target:
+            return mid
+        elif list1[mid] > target:
+            return binarySearch(list1,low,mid-1,target)
+        else:
+            return binarySearch(list1,mid+1,high,target)
+    else:
+        return -1 
+list1 = [5,7,7,8,8,10] 
+b=[]
+target=0
+res=binarySearch(list1,0,len(list1)-1,target)
+if res != -1 :
+    print(res)
+else:
+    print("[ -1, -1 ]")
