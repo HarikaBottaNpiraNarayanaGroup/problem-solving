@@ -1,0 +1,44 @@
+Given an mxn matrix, return all elements of the matrix in the spiral order 
+example :
+1 2 3
+4 5 6
+7 8 9
+input matrix:
+[[1,2,3],[4,5,6],[7,8,9]]
+output:
+[1,2,3,6,9,8,7,4,5]
+
+CODE :
+
+def combinationSum(arr, sum):
+	ans = []
+	temp = []
+
+	arr = sorted(list(set(arr)))
+	findNumbers(ans, arr, temp, sum, 0)
+	return ans
+
+def findNumbers(ans, arr, temp, sum, index):
+	if(sum == 0):
+		ans.append(list(temp))
+		return
+	for i in range(index, len(arr)):
+		if(sum - arr[i]) >= 0:
+			temp.append(arr[i])
+			findNumbers(ans, arr, temp, sum-arr[i], i)
+			temp.remove(arr[i])
+arr = [2,3,5]
+sum = 8
+ans = combinationSum(arr, sum) 
+if len(ans) <= 0:
+	print("[]")
+for i in range(len(ans)):
+	print("[", end=' ')
+	for j in range(len(ans[i])):
+		print(str(ans[i][j])+" ", end=' ')
+	print("]", end=' ')
+  
+ OUTPUT:
+ [ 2  2  2  2  ] [ 2  3  3  ] [ 3  5  ] 
+
+
