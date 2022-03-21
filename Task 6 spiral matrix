@@ -9,11 +9,6 @@ output:
 [1,2,3,6,9,8,7,4,5]
 
 CODE :
-
-# Python3 program to print
-# given matrix in spiral form
-
-
 def spiralPrint(m, n, a):
 	k = 0
 	l = 0
@@ -59,18 +54,17 @@ def spiralPrint(m, n, a):
 
 
 # Driver Code
-a = [[1, 2, 3, 4, 5, 6],
-	[7, 8, 9, 10, 11, 12],
-	[13, 14, 15, 16, 17, 18]]
+a = [[1, 2, 3],
+	[4, 5, 6],
+	[7, 8, 9]]
 
-R = 3
-C = 6
+R = len(a)
+C = len(a[0])
 
 # Function Call
 spiralPrint(R, C, a)
 
-# This code is contributed by Nikita Tiwari.
 OUTPUT:
-1 2 3 4 5 6 12 18 17 16 15 14 13 7 8 9 10 11 
+1 2 3 6 9 8 7 4 5 
 
 
